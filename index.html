@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Test</h1>
+</body>
+</html>
+
+
+<script>
+    function createImage(src) {
+        const img = document.createElement('img');
+        img.src = src;
+        img.style.height = '250px';
+        img.style.imageRendering = 'pixelated';
+        img.style.border = '1px solid black';
+        return img;
+    }
+
+    for (let i = 0; i < 20; i++) {
+        const src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/${i}.png`;
+        let img = createImage(src)
+        document.body.appendChild(img);
+    }
+</script>
